@@ -1,0 +1,35 @@
+body{
+        background:  linear-gradient(120deg,rgb(47, 0, 255),rgb(0, 243, 239),rgba(198, 0, 243, 0.421));
+        font-family: sans-serif;
+    }
+marquee{
+    background: linear-gradient(120deg,rgba(1, 5, 253, 0.56),rgba(243, 0, 211, 0.56));
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 5px 30px black;
+    font-family: sans-serif;
+}
+.header{
+    background:  linear-gradient(120deg,rgb(47, 0, 255),rgb(0, 243, 239),rgba(198, 0, 243, 0.421));
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+.header:hover{
+    transform: translateY(13px);
+}
+.navbar, .nav-link{
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-style: italic;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+.navbar a:hover{
+    background-color: rgb(121, 57, 121);
+    transform: scale(1.1);
+}
+
+

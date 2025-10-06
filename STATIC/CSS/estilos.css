@@ -1,0 +1,109 @@
+body{
+  font-family: sans-serif;
+}
+marquee{
+  background: linear-gradient(120deg,rgba(1, 5, 253, 0.56),rgba(243, 0, 211, 0.56));
+  color: white;
+  font-size: 50px;
+  font-family: sans-serif;
+  text-shadow: 0 5px 30px black;
+}
+.header{
+    background:  linear-gradient(120deg,rgb(47, 0, 255),rgb(0, 243, 239),rgba(198, 0, 243, 0.421));
+    border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.header:hover{
+  transform: translateY(13px);
+}
+.navbar, .nav-link{
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-style: italic;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+.navbar a:hover{
+    background-color: rgb(121, 57, 121);
+  transform: scale(1.1);
+}
+#servicios{
+    background:  linear-gradient(120deg,rgb(47, 0, 255),rgb(0, 243, 239),rgba(198, 0, 243, 0.421));
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0 5px 50px black;
+    color: black;
+}
+#servicios img{
+    transition: transform 0.2s ease;
+    border-radius: 20%;
+}
+#servicios img:hover{
+  transform: scale(1.07);
+}
+.card-body{
+  background-color: rgb(240, 233, 233);
+  border-radius: 5px;
+    transition: transform 0.5s ease;
+    border-bottom: 3px solid rgb(48, 48, 48);
+    box-shadow: 0 0 0 1px rgb(192, 191, 191);
+}
+.card-body:hover{
+  transform: translate(12px,12px);
+}
+#marcas{
+    background: linear-gradient(125deg,rgba(1, 5, 253, 0.56),rgba(243, 0, 211, 0.56));
+    color: white;
+    border-radius: 20px;
+    box-shadow: 25px 30px 40px rgb(50, 174, 205);
+    margin-top: 15px;
+    font-size: 30px;
+    transition: transform 0.4s ease;
+}
+#marcas:hover{
+  transform: scale(0.92);
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+.marquee-content img {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+#marcas img{
+  transition: transform 0.4s ease;
+}
+#marcas img:hover{
+  transform: scale(1.2);
+}
+footer{
+border-radius: 10px;
+margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
+footer:hover{
+  transform: scale(1.05);
+}
+
+

@@ -1,0 +1,65 @@
+marquee{
+  background: linear-gradient(120deg,rgba(1, 5, 253, 0.56),rgba(243, 0, 211, 0.56));
+  color: white;
+  font-size: 50px;
+  text-shadow: 0 5px 30px black;
+  font-family: sans-serif;
+}
+.header{
+    background:  linear-gradient(120deg,rgb(47, 0, 255),rgb(0, 243, 239),rgba(198, 0, 243, 0.421));
+    border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+.header:hover{
+  transform: translateY(13px);
+}
+.navbar, .nav-link{
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    font-style: italic;
+    padding: 5px;
+      transition: transform 0.3s ease;
+}
+.navbar a:hover{
+    background-color: rgb(121, 57, 121);
+  transform: scale(1.1);
+}
+body{
+  background-color: #f4f6f8;
+  font-family: sans-serif;
+  padding: 0;
+}
+.card{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px black;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 5px 25px rgb(54, 54, 54);
+}
+.card img{
+  height: 300px;
+  object-fit: contain;
+  padding: 15px;
+  transition: transform 0.5s ease;
+}
+.card img:hover{
+  transform: scale(1.1);
+}
+.card:hover{
+  box-shadow: 0 8px 30px rgb(43, 108, 248);
+}
+.card h5 p{
+  font-weight: bolder;
+}
+.row{
+  margin: 15px;
+}
