@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura - Gametech Solution</title>
+    <!-- CDN bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- estilos css -->
+    <link rel="stylesheet" href="../STATIC/CSS/factura.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="factura-container">
+            <div class="factura-header">
+                <img src="../STATIC/IMG/Gameth Solution.png" alt="Gametech Solution" height="100px">
+                <div>
+                    <h1>GAMETECH SOLUTION</h1>
+                    <p>Tienda de Tecnología</p>
+                    <p>NIT: 900.123.456-7</p>
+                </div>
+            </div>
+
+            <h2 class="text-center mb-4">FACTURA DE VENTA</h2>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label>Cliente:</label>
+                    <input type="text" id="cliente" class="form-control" placeholder="Nombre del cliente">
+                </div>
+                <div class="col-md-6">
+                    <label>Cédula/NIT:</label>
+                    <input type="text" id="cedula" class="form-control" placeholder="Cédula o NIT">
+                </div>
+            </div>
+
+            <h4 class="mt-4 mb-3">Productos Seleccionados</h4>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Valor Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select id="prod1" class="form-select" onchange="mostrar()">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="2599990">Portátil Asus Vivobook</option>
+                                    <option value="13189990">Portátil MSI VECTOR16</option>
+                                    <option value="4299990">Portátil MSI Thin 15</option>
+                                    <option value="2999990">Portátil HP Victus 15</option>
+                                    <option value="314990">Monitor Acer 21.5"</option>
+                                    <option value="739990">Monitor Acer Nitro 23.8"</option>
+                                    <option value="969990">Monitor Acer Nitro 27"</option>
+                                    <option value="1974990">Torre Bronce</option>
+                                    <option value="2699990">Torre Plata</option>
+                                    <option value="3299990">Torre Tibio</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="desc01" class="form-control" readonly></td>
+                            <td><input type="number" id="vau01" class="form-control" readonly></td>
+                            <td><input type="number" id="cant01" class="form-control" min="0" value="0" onchange="mostrar()"></td>
+                            <td><input type="number" id="vat01" class="form-control" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="prod2" class="form-select" onchange="mostrar()">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="189990">Mouse Logitech G305</option>
+                                    <option value="124990">Mouse Logitech M350</option>
+                                    <option value="229990">Teclado Redragon K630</option>
+                                    <option value="649990">Teclado Logitech G513</option>
+                                    <option value="139990">Diadema VSG Gemini</option>
+                                    <option value="699990">Diadema Logitech G733</option>
+                                    <option value="6944000">Tarjeta ASUS RTX 5080</option>
+                                    <option value="922000">Tarjeta ASUS RTX 3050</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="desc02" class="form-control" readonly></td>
+                            <td><input type="number" id="vau02" class="form-control" readonly></td>
+                            <td><input type="number" id="cant02" class="form-control" min="0" value="0" onchange="mostrar()"></td>
+                            <td><input type="number" id="vat02" class="form-control" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="prod3" class="form-select" onchange="mostrar()">
+                                    <option value="0">Seleccione...</option>
+                                    <option value="423000">Ventilador Lian Li</option>
+                                    <option value="715000">Refrigeración Thermaltake</option>
+                                    <option value="1140000">Procesador AMD Ryzen 5</option>
+                                    <option value="1588000">Procesador Intel Core Ultra 5</option>
+                                    <option value="1331000">Board ASROCK Z890</option>
+                                    <option value="1529000">Board MSI MAG X870E</option>
+                                </select>
+                            </td>
+                            <td><input type="text" id="desc03" class="form-control" readonly></td>
+                            <td><input type="number" id="vau03" class="form-control" readonly></td>
+                            <td><input type="number" id="cant03" class="form-control" min="0" value="0" onchange="mostrar()"></td>
+                            <td><input type="number" id="vat03" class="form-control" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="mt-4 mb-3">Servicios Adicionales</h4>
+            <div class="adicionales">
+                <label><input type="checkbox" id="checkbox1" onchange="mostrar()"> Instalación y Configuración ($50.000)</label>
+                <label><input type="checkbox" id="checkbox2" onchange="mostrar()"> Garantía Extendida ($100.000)</label>
+                <label><input type="checkbox" id="checkbox3" onchange="mostrar()"> Soporte Técnico Premium ($75.000)</label>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label>Total Adicionales:</label>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" id="adic0" class="form-control" readonly>
+                </div>
+            </div>
+
+            <h4 class="mt-4 mb-3">Método de Pago</h4>
+            <div class="metodo-pago">
+                <label><input type="radio" name="pago" id="radio1" onchange="mostrar()"> Efectivo (10% descuento)</label>
+                <label><input type="radio" name="pago" id="radio2" onchange="mostrar()"> Tarjeta de Crédito</label>
+                <label><input type="radio" name="pago" id="radio3" onchange="mostrar()"> Transferencia Bancaria</label>
+            </div>
+
+            <div class="totales mt-4">
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Subtotal:</strong></div>
+                    <div class="col-6"><input type="number" id="subt" class="form-control" readonly></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-6"><strong>IVA (19%):</strong></div>
+                    <div class="col-6"><input type="number" id="iva" class="form-control" readonly></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-6"><strong>Descuento:</strong></div>
+                    <div class="col-6"><input type="number" id="desc" class="form-control" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-6"><strong>TOTAL A PAGAR:</strong></div>
+                    <div class="col-6"><input type="number" id="neto" class="form-control total-final" readonly></div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-success btn-lg" onclick="generar()">Generar Factura</button>
+                <a href="./carrito.html" class="btn btn-secondary btn-lg">Volver al Carrito</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- facturav.js -->
+    <script src="../STATIC/JS/facturav.js"></script>
+</body>
+</html>
